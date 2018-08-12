@@ -2,14 +2,15 @@ package main.java.com.mokhov.ch5;
 
 public class FindPrime {
     public static void main(String[] args) {
-        int iter =500000;
+        int iter =50000000;
         boolean isPrime;
+
         int count=0;
-        for(int i =2;i <iter; i++){
-            if(myAlg(i))
-                count++;
-        }
-        System.out.println("1. В "+iter+" найдено "+count+" простых чисел");
+//        for(int i =2;i <iter; i++){
+//            if(myAlg(i))
+//                count++;
+//        }
+//        System.out.println("1. В "+iter+" найдено "+count+" простых чисел");
         count=0;
         for(int i =2;i <iter; i++){
             if(bookAlg(i))
@@ -33,8 +34,10 @@ public class FindPrime {
     public static boolean  bookAlg(int num){
         boolean isPrime=true;
         for (int i = 2; i <=num/i ; i++) {
-            if(num%i==0)
-                isPrime=false;
+            if(num%i==0) {
+                isPrime = false;
+                break;
+            }
         }
 //        if(isPrime){
 //            System.out.println(num);
