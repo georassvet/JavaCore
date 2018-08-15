@@ -10,7 +10,7 @@ public class Box {
         this.height =box.height;
         this.depth=box.depth;
     }
-    Box(int width){
+    Box(double width){
         this.width=this.height=this.depth=width;
     }
     Box(double width,double height,double depth){
@@ -33,6 +33,18 @@ class BoxWeight extends Box{
     BoxWeight(double weight, double height, double width, double depth){
         super(width,height,depth);
         this.weigth=weight;
+    }
+    BoxWeight(BoxWeight boxWeight){
+        super(boxWeight);
+        weigth=boxWeight.weigth;
+    }
+    BoxWeight(){
+        super();
+        this.weigth=-1;
+    }
+    BoxWeight(double weigth,double width){
+        super(width);
+        this.weigth=weigth;
     }
 
 }
