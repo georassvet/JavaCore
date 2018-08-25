@@ -17,6 +17,7 @@ public class GameLogic implements GameStatus {
         int gameStatus;
 
         for (int i = 0; i < 9 ; i++) {
+            ++counter;
             if(i%2==0){
                 System.out.println("Ходит " + player1.getPlayerName());
                 gameStatus = gameStep(player1, 'X');
@@ -56,7 +57,7 @@ public class GameLogic implements GameStatus {
             checkStep = field.setField(marker,pos);
         }
         while (!checkStep);
-        if(++counter>4) {
+        if(counter>=3) {
             if (checkWinner(pos)) return WIN;
         }
         return CONTINUE;

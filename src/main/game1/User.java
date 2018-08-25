@@ -16,13 +16,6 @@ public class User implements IPlayer {
     @Override
     public int makeStep() {
         Scanner scanner =new Scanner(System.in);
-        boolean checkStep =true;
-        int pos;
-        do{
-            pos =scanner.nextInt();
-
-        }
-        while (!checkStep);
-        return pos;
+        return scanner.nextInt();
     }
 }
