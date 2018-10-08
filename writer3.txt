@@ -1,0 +1,3 @@
+The following example is a character stream version of an example shown earlier
+when FileOutputStream was discussed. This version creates a sample buffer of
+characters by first making a String and then using the getChars( ) method to extract

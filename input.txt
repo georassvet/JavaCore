@@ -1,0 +1,5 @@
+200 Moscow 2.00 ABC
+5 New York 0.50 BCA
+100 Berlin 1.00 ABC
+1 Beijing 3.00 ABC
+10 Tokyo 0.75 BCA

@@ -45,6 +45,17 @@ public final class Directory {
             dirs.addAll(other.dirs);
         }
     }
+
+    public static long getTotalSize(String dir , String regex){
+        long sumSize = 0;
+        for ( File file: Directory.walk(dir, regex).files
+             ) {
+            sumSize+=file.length();
+            System.out.println("file.length() "+file.length()+ " getTotalSpace()"+file.getTotalSpace());
+        }
+        return sumSize;
+    }
+
         public static TreeInfo walk(File start, String regex){
             return recurseDirs(start, regex);
         }
@@ -64,7 +75,7 @@ public final class Directory {
                  ) {
                 if(item.isDirectory()){
                     result.dirs.add(item);
-                    result.addAll(recurseDirs(item,regex));
+                  //  result.addAll(recurseDirs(item,regex));
                 }else{
                     if(item.getName().matches(regex)){
                         result.files.add(item);

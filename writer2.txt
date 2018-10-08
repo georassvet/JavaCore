@@ -1,0 +1,1 @@
+ing a String and then using the getChars( ) method to extrac
